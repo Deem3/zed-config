@@ -1,0 +1,59 @@
+[
+  {
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-shift-w": "pane::ReopenClosedItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "g c": "editor::ToggleComments",
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "s s": "pane::SplitRight",
+      "s h": "pane::SplitDown",
+      "space e": "pane::ActivateNextItem",
+      "space w": "pane::ActivatePrevItem",
+      "shift": "editor::Hover",
+      "g r": "editor::FindAllReferences",
+      "ctrl-a": "editor::SelectAll"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "g c": "editor::ToggleComments",
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "s s": "pane::SplitRight",
+      "s h": "pane::SplitDown",
+      "space e": "pane::ActivateNextItem",
+      "space w": "pane::ActivatePrevItem",
+      "shift": "editor::Hover",
+      "g r": "editor::FindAllReferences",
+      "ctrl-a": "editor::SelectAll"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock",
+      ": q": "pane::CloseActiveItem"
+    }
+  },
+  // Tasks
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space g g": ["task::Spawn", { "lazygit": "Open lazygit" }]
+    }
+  }
+]
